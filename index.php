@@ -1,5 +1,5 @@
 
-<?php include("header.php"); ?>
+<?php include("headerprincipal.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
