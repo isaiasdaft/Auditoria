@@ -22,14 +22,14 @@ try {
                 $_SESSION['departamento'] = $filas['departamento'];
                 $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; // Agrega esta línea
                 
-                header("location:home.php");
+                header("location:vistas/home.php");
                 exit();
             } elseif ($filas['tipo_usuario'] == 2) {
                 $_SESSION['id'] = $filas['id'];
                 $_SESSION['departamento'] = $filas['departamento'];
                 $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; // Agrega esta línea
                 
-                header("location:home.php");
+                header("location:vistas/home.php");
                 exit();
             } else {
                 echo "<script>alert('Tipo de usuario no reconocido')</script>";
