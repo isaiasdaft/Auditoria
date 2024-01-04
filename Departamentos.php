@@ -108,6 +108,10 @@
     #hero {
       margin-top: -57px; /* Ajusta este valor según sea necesario */
     }
+    .icon-box i {
+    color: #fff; /* Cambia #000 al color que desees */
+    margin-right: 10px; /* Ajusta el valor según la cantidad de espacio deseada */
+  }
   </style>
 </head>
 
@@ -127,34 +131,59 @@
       <div class="row mt-1"> <!-- Reduje el espacio superior -->
         <div class="col-12 text-center"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
-            <i class="ri-user-line"></i>
-            <h3><a href="#">DEPARTAMENTO PERSONAL​</a></h3>
+           
+            <h3>  <i class="ri-user-line"></i> <a href="#">DEPARTAMENTO PERSONAL​</a></h3>
           </div>
         </div>
 
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
-            <i class="fas fa-book"></i>
-            <h3><a href="#">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA​</a></h3>
+           
+            <h3> <i class="fas fa-book"></i><a href="#">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA​</a></h3>
           </div>
         </div>
 
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
             <!-- Icono de Presupuesto y Control del Gasto -->
-            <i class="fas fa-dollar-sign"></i>
-            <h3><a href="#">DEPARTAMENTO PRESUPUESTO Y CONTROL</a></h3>
+           
+            <h3> <i class="fas fa-dollar-sign"></i><a href="#">DEPARTAMENTO PRESUPUESTO Y CONTROL</a></h3>
           </div>
         </div>
 
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
-            <i class="fas fa-handshake"></i>
-            <h3><a href="#">DEPARTAMENTO RELACIONES LABORALES</a></h3>
+            
+            <h3><i class="fas fa-handshake"></i><a href="#">DEPARTAMENTO RELACIONES LABORALES</a></h3>
           </div>
         </div>
       </div>
     </div>
+    <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+
+ 
   </section><!-- End Hero -->
 
 </body>
