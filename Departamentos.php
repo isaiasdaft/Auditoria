@@ -1,5 +1,3 @@
-<?php include("headerprincipal.php"); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,9 +38,9 @@
     #hero {
       background-color: #545957;
       /* Color de fondo de la sección del héroe */
-      color: #fff;
+      color: #00ff00;
       /* Color del texto de la sección del héroe */
-      padding: 60px 0;
+      padding: 20px 0;
       /* Espaciado interno de la sección del héroe */
       text-align: center;
       /* Alineación del texto en el centro */
@@ -105,15 +103,18 @@
     .nav-link:hover {
       color: #007bff;
     }
+
+    /* Ajustes para reducir el espacio entre el encabezado y la sección del héroe */
+    #hero {
+      margin-top: -57px; /* Ajusta este valor según sea necesario */
+    }
   </style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <!-- ... (tu contenido actual del encabezado) ... -->
-  </header><!-- End Header -->
+  <?php include("headerprincipal.php"); ?>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
@@ -123,52 +124,36 @@
           <h2></h2>
         </div>
       </div>
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
+      <div class="row mt-1"> <!-- Reduje el espacio superior -->
+        <div class="col-12 text-center"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
-          <i class="ri-user-line"></i>
-            <h3><a href="#">DEPARTAMENTO DE PERSONAL​</a></h3>
+            <i class="ri-user-line"></i>
+            <h3><a href="#">DEPARTAMENTO PERSONAL​</a></h3>
           </div>
         </div>
 
-        <div class="col-xl-2 col-md-4">
+        <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
-          <i class="fas fa-book"></i>
+            <i class="fas fa-book"></i>
             <h3><a href="#">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA​</a></h3>
           </div>
         </div>
 
-        <div class="col-xl-2 col-md-4">
+        <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
             <!-- Icono de Presupuesto y Control del Gasto -->
             <i class="fas fa-dollar-sign"></i>
-
-            <h3><a href="#">DEPARTAMENTO DE PRESUPUESTO Y CONTROL DEL GASTO</a></h3>
+            <h3><a href="#">DEPARTAMENTO PRESUPUESTO Y CONTROL</a></h3>
           </div>
         </div>
 
-        <div class="col-xl-2 col-md-4">
+        <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
-          <i class="fas fa-handshake"></i>
-            <h3><a href="#">DEPARTAMENTO DE RELACIONES LABORALES</a></h3>
+            <i class="fas fa-handshake"></i>
+            <h3><a href="#">DEPARTAMENTO RELACIONES LABORALES</a></h3>
           </div>
         </div>
       </div>
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
     </div>
   </section><!-- End Hero -->
 
