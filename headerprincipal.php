@@ -16,7 +16,7 @@
 <nav type="navbar" class="navbar navbar-expand-lg navbar-dark static-top" style="background-color: #1F6157;">
     <div class="container">
         <a class="navbar-brand" href="index.php">
-            <img src="assets/img/a.jpg" alt="" width="85px">
+            <img src="assets/img/a.jpg" alt="" width="90px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
