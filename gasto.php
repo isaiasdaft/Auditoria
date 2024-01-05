@@ -99,9 +99,10 @@
     }
 
     .icon-box.selected {
-      background-color: #007bff;
-      color: #ffffff;
-    }
+  background-color: #007bff !important;
+  color: #ffffff !important;
+}
+
 
     .nav-link:hover {
       color: #007bff;
@@ -111,12 +112,15 @@
       background-color: #e74c3c;
       /* Cambia el color de fondo para la segunda fila */
       height: 150px;
-      /* Ajusta la altura según tus necesidades */
+      /* Ajusta la altura según tus necesidades
+      
+      le doy clic a los iconos pero yo quiero que sea al reves q al entrar en ese php ya esten iluminados los iconos y al darle clic se desiluminen*/
     }
   </style>
 </head>
 
 <body>
+<?php include("headerprincipal.php"); ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -129,7 +133,7 @@
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <div class="col-xl-6 col-lg-8">
           <h2>DEPARTAMENTO DE PRESUPUESTO Y CONTROL DEL GASTO</h2>
-          <h5>PRESUPUESTO Y GESTION DEL GASTO​</h5>
+          <h5>PRESUPUESTO Y GESTIÓN DEL GASTO​</h5>
         </div>
       </div>
       <br>
@@ -138,29 +142,29 @@
 
         <table>
           <tr>
-            <th class="icon-box" onclick="toggleIcon(this)">
+            <th class="icon-box selected" onclick="toggleIcon(this)" >
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 8.1 </a></h3>
+              <h3><a href="8_1.php"> 8.1 </a></h3>
             </th>
             <th></th>
-            <th class="icon-box" onclick="toggleIcon(this)">
+            <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
               <h3><a href="#"> 8.2 </a></h3>
             </th>
             <th></th>
-            <th class="icon-box" onclick="toggleIcon(this)">
+            <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
               <h3><a href="#"> 8.3 </a></h3>
             </th>
           </tr>
           <tr>
             <td></td>
-            <td class="icon-box" onclick="toggleIcon(this)">
+            <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
               <h3><a href="#"> 8.4 </a></h3>
             </td>
             <td></td>
-            <td class="icon-box" onclick="toggleIcon(this)">
+            <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
               <h3><a href="#"> 8.5 </a></h3>
             </td>
@@ -205,10 +209,20 @@
   </section><!-- End Hero -->
 
   <script>
-    function toggleIcon(element) {
-      element.classList.toggle('selected');
-    }
-  </script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Ilumina todos los elementos al cargar la página
+    var iconBoxes = document.querySelectorAll('.icon-box');
+    iconBoxes.forEach(function(box) {
+      box.classList.add('selected');
+    });
+  });
+
+  function toggleIcon(element) {
+    // Desilumina el elemento clicado
+    element.classList.remove('selected');
+  }
+</script>
+
 
 </body>
 
