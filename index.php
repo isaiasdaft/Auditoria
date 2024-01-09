@@ -1,5 +1,5 @@
 
-<?php include("headerprincipal.php"); ?>
+<?php include("vistas/headerprincipal.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,6 +59,7 @@
     <br>
 
     <img id="2" src="assets/img/imagen1.png" width="165px">
-    <button type="button" class="btn btn-secondary">Secondary</button>
+    
+    <button type="sumbit" class="btn btn-secondary"> <a href="vistas/Departamentos.php">Secondary</a></button>
 
 </body>

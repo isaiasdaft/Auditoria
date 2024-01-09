@@ -132,14 +132,14 @@
         <div class="col-12 text-center"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
            
-            <h3>  <i class="ri-user-line"></i> <a href="#">DEPARTAMENTO PERSONAL​</a></h3>
+            <h3>  <i class="ri-user-line"></i> <a href="personal.php">DEPARTAMENTO PERSONAL​</a></h3>
           </div>
         </div>
 
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
            
-            <h3> <i class="fas fa-book"></i><a href="#">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA​</a></h3>
+            <h3> <i class="fas fa-book"></i><a href="capacitacion.php">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA​</a></h3>
           </div>
         </div>
 
@@ -147,14 +147,14 @@
           <div class="icon-box">
             <!-- Icono de Presupuesto y Control del Gasto -->
            
-            <h3> <i class="fas fa-dollar-sign"></i><a href="#">DEPARTAMENTO PRESUPUESTO Y CONTROL</a></h3>
+            <h3> <i class="fas fa-dollar-sign"></i><a href="presupuesto.php">DEPARTAMENTO PRESUPUESTO Y CONTROL DE GASTOS</a></h3>
           </div>
         </div>
 
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
             
-            <h3><i class="fas fa-handshake"></i><a href="#">DEPARTAMENTO RELACIONES LABORALES</a></h3>
+            <h3><i class="fas fa-handshake"></i><a href="relaciones.php">DEPARTAMENTO RELACIONES LABORALES</a></h3>
           </div>
         </div>
       </div>
@@ -181,10 +181,16 @@
  <br>
  <br>
  <br>
- 
+ <br>
+ <br> 
+ <br>
+ <br>
+ <br>
 
  
   </section><!-- End Hero -->
+  <br>
+ <br>
 
 </body>
 
