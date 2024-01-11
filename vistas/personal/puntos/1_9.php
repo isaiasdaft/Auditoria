@@ -1,23 +1,18 @@
-<?php include("headerprincipal.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title><?php echo isset($tituloPagina) ? $tituloPagina : "Auditoría"; ?></title>
-  <link rel="stylesheet" type="text/css" href="../librerias/bootstrap4/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../librerias/fontawesome/css/all.css">
+  <title><?php echo isset($tituloPagina) ? $tituloPagina : "Fuerza de Trabajo"; ?></title>
+  <link rel="stylesheet" type="text/css" href="../../librerias/bootstrap4/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../librerias/fontawesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/nav.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  
   <!-- Vendor CSS Files -->
   <style>
     /* Estilos del encabezado */
-
-
-
     .logo a {
       color: #5E6160;
       /* Color del texto del logo */
@@ -30,27 +25,39 @@
 
     .nav-link:hover {
       color: #007bff;
+      /* Color del texto del enlace de navegación al pasar el ratón */
     }
 
+    /* Estilos de la sección del héroe */
     #hero {
       background-color: #545957;
+      /* Color de fondo de la sección del héroe */
       color: #fff;
-      padding: 50px 0;
+      /* Color del texto de la sección del héroe */
+      padding: 60px 0;
+      /* Espaciado interno de la sección del héroe */
       text-align: center;
+      /* Alineación del texto en el centro */
     }
 
     #hero h1 {
       font-size: 3em;
       /* Tamaño de fuente del título principal */
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       /* Espaciado inferior del título principal */
     }
 
     #hero h2 {
       font-size: 1.5em;
       /* Tamaño de fuente del subtítulo */
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       /* Espaciado inferior del subtítulo */
+    }
+
+    .icon-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .icon-box {
@@ -66,6 +73,8 @@
       border-style: solid;
       border-color: #347357;
       color: #ffffff;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      margin: 2px;
     }
 
     .icon-box:hover {
@@ -75,26 +84,27 @@
 
     .icon-box i {
       font-size: 2em;
-      margin-bottom: 5px;
+      margin-bottom: 1px;
       /* Reduzco el espaciado inferior de los íconos */
     }
 
     .icon-box h3 {
       font-size: 1.2em;
       margin-bottom: 0;
-      /* Elimino el espaciado inferior del título de la caja de iconos */
     }
-
     .icon-box a {
       color: #ffffff;
     }
-
-    .icon-box:hover a {
-      color: #000000;
-    }
-
+    .icon-box.selected {
+  background-color: #007bff !important;
+  color: #ffffff !important;
+}
     .nav-link:hover {
       color: #007bff;
+    }
+    .icon-container .second-row .icon-box {
+      background-color: #e74c3c;
+      height: 120px;
     }
     .btn-custom {
       background-color: #545957;
@@ -105,21 +115,16 @@
       cursor: pointer;
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
       font-size: 55px;
-     
     }
-
-
-    /* Estilo para el icono dentro del botón */
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
-      
-      /* Ajusta el espacio entre el icono y el texto si es necesario */
     }
   </style>
 </head>
 
 <body>
+<?php include("header.php"); ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -129,46 +134,49 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-12">
-          <h2>DEPARTAMENTO DE CAPACTIACIÓN Y TRANSPARENCIA</h2>
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-xl-6 col-lg-8">
+          <h2>Fuerza del trabajo</h2>
+          <h4>Fuerza del Trabajo</h4>
+          <br>
+          <h4>subir archivo:</h4>
+          <h5>1.9</h5>
         </div>
       </div>
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="capacitacionTransparencia/capa.php">CAPACITACIÓN</a></h3>
-
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="capacitacionTransparencia/transparencia.php">TRANSPARENCIA </a></h3>
-
-          </div>
-        </div>
-      </div>  
       <p></p>
       <br>
-      <a href="Departamentos.php" class="btn-custom btn-lg">
+      <center>
+    
+      </center>
+      <a href="../fuerzaTrabajo.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
-
-    <br>
-    <br>
-    <br>
-    <br>
+    
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
-  </section>
+    <br>
+  </section><!-- End Hero -->
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Ilumina todos los elementos al cargar la página
+    var iconBoxes = document.querySelectorAll('.icon-box');
+    iconBoxes.forEach(function(box) {
+      box.classList.add('selected');
+    });
+  });
+
+  function toggleIcon(element) {
+    // Desilumina el elemento clicado
+    element.classList.remove('selected');
+  }
+</script>
+
+
 </body>
-
-<script src="../librerias/jquery-3.7.1.min.js"></script>
-<script src="../librerias/bootstrap4/bootstrap.min.js"></script>
-<script src="../librerias/bootstrap4/popper.min.js"></script>
-<script src="../librerias/datatable/jquery.dataTables.min.js"></script>
-<script src="../librerias/datatable/dataTables.bootstrap4.min.js"></script>
-
-
 </html>
