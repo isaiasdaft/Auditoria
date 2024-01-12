@@ -1,3 +1,18 @@
+<?php
+session_start();
+include("../conexion.php");
+
+if (!isset($_SESSION['id'])) {
+    header('Location: ../index.php');
+    exit;
+} else {
+    $idd = $_SESSION['id'];
+}
+
+$tituloPagina = "Presupesuto";
+?>
+
+
 <?php include("headerprincipal.php"); ?>
 
 <!DOCTYPE html>
@@ -58,7 +73,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #5E6160;
+      background-color: #757676;
       padding: 28px;
       border-radius: 10px;
       transition: 0.3s;
@@ -128,7 +143,7 @@
       </div>  
       <p></p>
       <br>
-      <a href="Departamentos.php" class="btn-custom btn-lg">
+      <a href="../Departamentos.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
     <br>

@@ -95,7 +95,7 @@
     </div>
     <div class="col-sm-1 d-flex align-items-center justify-content-center"> <!-- Alinea vertical y horizontalmente -->
     <button type="submit" class="btn btn-custom animate-in">
-        <a href="vistas/Departamentos.php" class="btn-link">Auditoria UP 2023</a>
+        <a href="Departamentos.php" class="btn-link">Auditoria UP 2023</a>
       </button>
     </div>
   </div>

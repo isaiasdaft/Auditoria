@@ -1,49 +1,48 @@
 <?php
-$usuario = $_POST['usuario'];
-$contraseña = $_POST['contraseña'];
+$matricula = $_POST['matricula'];
+$departamento = $_POST['departamento'];
 session_start();
-$_SESSION['usuario'] = $usuario;
-
+$_SESSION['matricula'] = $matricula;
 $conexion = mysqli_connect("localhost", "root", "", "auditoria");
 
 try {
-    if (filter_var($usuario)) {
-        $consulta = "SELECT * FROM usuarios WHERE usuario=? AND contraseña=?";
+    if (filter_var($matricula)) {
+        $consulta = "SELECT * FROM usuarios WHERE matricula=? AND departamento=?";
         $stmt = mysqli_prepare($conexion, $consulta);
-        mysqli_stmt_bind_param($stmt, "ss", $usuario, $contraseña);
+        mysqli_stmt_bind_param($stmt, "ss", $matricula, $departamento);
         mysqli_stmt_execute($stmt);
         $resultado = mysqli_stmt_get_result($stmt);
         $c = mysqli_num_rows($resultado);
-
         if ($c > 0) {
             $filas = mysqli_fetch_assoc($resultado);
-            if ($filas['tipo_usuario'] == 1) {
+            if ($filas['departamento'] == 1) {
                 $_SESSION['id'] = $filas['id'];
-                $_SESSION['departamento'] = $filas['departamento'];
-                $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; // Agrega esta línea
-                
-                header("location:vistas/home.php");
-                exit();
-            } elseif ($filas['tipo_usuario'] == 2) {
+                $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
+                echo json_encode(["redirect" => "vistas/capacitacion.php"]);
+            } elseif ($filas['departamento'] == 2) {
                 $_SESSION['id'] = $filas['id'];
-                $_SESSION['departamento'] = $filas['departamento'];
-                $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; // Agrega esta línea
-                
-                header("location:vistas/home.php");
-                exit();
+                $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
+                echo json_encode(["redirect" => "vistas/personal.php"]);
+            } elseif ($filas['departamento'] == 3) {
+                $_SESSION['id'] = $filas['id'];
+                $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
+                echo json_encode(["redirect" => "vistas/relaciones.php"]);
+            } elseif ($filas['departamento'] == 4) {
+                $_SESSION['id'] = $filas['id'];
+                $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
+                echo json_encode(["redirect" => "vistas/presupuesto.php"]);
             } else {
-                echo "<script>alert('Tipo de usuario no reconocido')</script>";
+                echo json_encode(["error" => "Tipo de usuario no reconocido"]);
             }
         } else {
-            echo "<script>alert('Matricula y/o Contraseña Incorrectos')</script>";
+            echo json_encode(["error" => "Matricula o departamento Incorrectos"]);
         }
     } else {
-        echo "<script>alert('Matricula y/o Contraseña Incorrectos')</script>";
+        echo json_encode(["error" => "Matricula Incorrecta"]);
     }
 } catch (Exception $e) {
-    echo "<script>alert('Ocurrió un error al iniciar sesión')</script>";
+    echo json_encode(["error" => "Ocurrió un error al iniciar sesión"]);
 } finally {
     mysqli_close($conexion);
-    echo "<script>window.location.href='index.php';</script>";
 }
 ?>
