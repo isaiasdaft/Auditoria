@@ -1,3 +1,17 @@
+<?php
+session_start();
+include("../../conexion.php");
+
+if (!isset($_SESSION['id'])) {
+    header('Location: ../../index.php');
+    exit;
+} else {
+    $idd = $_SESSION['id'];
+}
+
+$tituloPagina = "Personal";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +22,15 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/nav.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
   <!-- Vendor CSS Files -->
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #545957;
+      /* Color de fondo de la página */
+    }
+
     /* Estilos del encabezado */
     .logo a {
       color: #5E6160;
@@ -98,16 +118,23 @@
     }
 
     .icon-box.selected {
-  background-color: #007bff !important;
-  color: #ffffff !important;
-}
+      background-color: #007bff !important;
+      color: #ffffff !important;
+    }
+
     .nav-link:hover {
       color: #007bff;
     }
+
     .icon-container .second-row .icon-box {
       background-color: #e74c3c;
       height: 120px;
     }
+    .btn-cus {
+      color: #a3d6bd;
+      border: none;
+    }
+
     .btn-custom {
       background-color: #545957;
       color: #438c6b;
@@ -118,6 +145,7 @@
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
       font-size: 55px;
     }
+
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
@@ -126,7 +154,7 @@
 </head>
 
 <body>
-<?php include("headerpersonal.php"); ?>
+  <?php include("headerpersonal.php"); ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -143,11 +171,11 @@
         </div>
       </div>
       <br>
-      
+
       <center>
         <table>
           <tr>
-            <th class="icon-box selected" onclick="toggleIcon(this)" >
+            <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
               <h3><a href="puntos/1_1.php"> 1.1 </a></h3>
             </th>
@@ -190,7 +218,7 @@
             </td>
           </tr>
           <tr>
-            <th class="icon-box selected" onclick="toggleIcon(this)" >
+            <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
               <h3><a href="puntos/1_9.php">1.9</a></h3>
             </th>
@@ -212,29 +240,44 @@
           </tr>
         </table>
       </center>
-      <p></p>
+
       <a href="../personal.php" class="btn-custom btn-lg">
-      <span class="fa-solid fa-reply"></span>
-    </a>
-   
+        <span class="fa-solid fa-reply"></span>
+      </a>
+
     </div>
   </section><!-- End Hero -->
 
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Ilumina todos los elementos al cargar la página
-    var iconBoxes = document.querySelectorAll('.icon-box');
-    iconBoxes.forEach(function(box) {
-      box.classList.add('selected');
+    document.addEventListener("DOMContentLoaded", function() {
+      // Ilumina todos los elementos al cargar la página
+      var iconBoxes = document.querySelectorAll('.icon-box');
+      iconBoxes.forEach(function(box) {
+        box.classList.add('selected');
+      });
     });
-  });
 
-  function toggleIcon(element) {
-    // Desilumina el elemento clicado
-    element.classList.remove('selected');
+    function toggleIcon(element) {
+      // Desilumina el elemento clicado
+      element.classList.remove('selected');
+    }
+  </script>
+</body>
+
+<script>
+  // JavaScript para agregar clases al cerrar sesión
+  function cerrarSesion() {
+    setTimeout(function() {
+      window.location.href = 'cerrar_sesion.php';
+      setTimeout(function() {
+        document.body.classList.remove('logged-out', 'logged-out-effect');
+      }, 500);
+    }, 500);
   }
 </script>
-
-
-</body>
+<script src="../../librerias/jquery-3.7.1.min.js"></script>
+<script src="../../librerias/bootstrap4/bootstrap.min.js"></script>
+<script src="../../librerias/bootstrap4/popper.min.js"></script>
+<script src="../../librerias/datatable/jquery.dataTables.min.js"></script>
+<script src="../../librerias/datatable/dataTables.bootstrap4.min.js"></script>
 </html>

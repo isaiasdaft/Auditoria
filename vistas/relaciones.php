@@ -3,10 +3,10 @@ session_start();
 include("../conexion.php");
 
 if (!isset($_SESSION['id'])) {
-    header('Location: ../index.php');
-    exit;
+  header('Location: ../index.php');
+  exit;
 } else {
-    $idd = $_SESSION['id'];
+  $idd = $_SESSION['id'];
 }
 
 $tituloPagina = "Relaciones Laborales";
@@ -87,23 +87,29 @@ $tituloPagina = "Relaciones Laborales";
       background-color: #515353;
       color: #ffffff;
     }
+
     .icon-box i {
       font-size: 2em;
       margin-bottom: 5px;
     }
+
     .icon-box h3 {
       font-size: 1.2em;
       margin-bottom: 0;
     }
+
     .icon-box a {
       color: #ffffff;
     }
+
     .icon-box:hover a {
       color: #000000;
     }
+
     .nav-link:hover {
       color: #007bff;
     }
+
     .btn-custom {
       background-color: #545957;
       color: #438c6b;
@@ -114,12 +120,14 @@ $tituloPagina = "Relaciones Laborales";
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
       font-size: 55px;
     }
+
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
     }
   </style>
 </head>
+
 <body>
   <header id="header" class="fixed-top">
     <!-- ... (tu contenido actual del encabezado) ... -->
@@ -140,20 +148,31 @@ $tituloPagina = "Relaciones Laborales";
             <h3><a href="relaciones/relacionesLab.php">Relaciones laborales</a></h3>
           </div>
         </div>
-      </div>  
+      </div>
       <p></p>
       <br>
-      <a href="../Departamentos.php" class="btn-custom btn-lg">
-      <span class="fa-solid fa-reply"></span>
-    </a>
-    <br>
-    <br>
-    <br>
-    <br>
+      <a  href="javascript:void(0);" onclick="cerrarSesion()"class="btn-custom btn-lg">
+        <span class="fa-solid fa-reply"></span>
+      </a>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
   </section>
 </body>
 
+<script>
+  // JavaScript para agregar clases al cerrar sesión
+  function cerrarSesion() {
+    setTimeout(function() {
+      window.location.href = 'cerrar_sesion.php';
+      setTimeout(function() {
+        document.body.classList.remove('logged-out', 'logged-out-effect');
+      }, 500);
+    }, 500);
+  }
+</script>
 <script src="../librerias/jquery-3.7.1.min.js"></script>
 <script src="../librerias/bootstrap4/bootstrap.min.js"></script>
 <script src="../librerias/bootstrap4/popper.min.js"></script>

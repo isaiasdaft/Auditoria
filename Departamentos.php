@@ -4,28 +4,22 @@
   <title><?php echo isset($tituloPagina) ? $tituloPagina : "Auditoría"; ?></title>
   <link rel="stylesheet" type="text/css" href="librerias/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="librerias/fontawesome/css/all.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="path/to/remix-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
   <link rel="stylesheet" href="path/to/otro-archivo-de-estilos.css">
   <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
     .logo a {
-      color: #5E6160;
+      color: #a0cbac;
     }
     .nav-link {
-      color: #5E6160;
+      color: #a0cbac;
     }
     .nav-link:hover {
-      color: #007bff;
+      color: #a0cbac;
     }
     #hero {
-      background-color: #545957;
+      
       color: #00ff00;
       padding: 20px 0;
       text-align: center;
@@ -43,7 +37,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #5E6160;
+      background-color: #a0cbac;
       padding: 20px;
       border-radius: 10px;
       transition: 0.3s;
@@ -53,23 +47,25 @@
       color: #ffffff;
     }
     .icon-box:hover {
-      background-color: #515353;
+      background-color: #246f64;
       color: #ffffff;
     }
     .icon-box i {
       font-size: 2em;
       margin-bottom: 5px;
+      color: #0a0e0b; 
 
     }
     .icon-box h3 {
       font-size: 1.2em;
       margin-bottom: 0;
+      color: #0a0e0b; 
     }
     .icon-box a {
-      color: #ffffff;
+      color: #0a0e0b;
     }
     .icon-box:hover a {
-      color: #000000;
+      color: #0a0e0b;
     }
     .nav-link:hover {
       color: #007bff;
@@ -78,11 +74,11 @@
       margin-top: -57px;
     }
     .icon-box i {
-      color: #fff;
+      color: #3a3b3d;
       margin-right: 10px;
     }
     .btn-custom {
-      background-color: #545957;
+      background-color: #fff;
       color: #438c6b;
       border: none;
       padding: 25px 50px;
@@ -122,7 +118,7 @@
       </div>
       <p></p>
       <div class="row mt-1"> <!-- Reduje el espacio superior -->
-        <div class="col-12 text-center"> <!-- Ocupa todo el ancho disponible y centrado -->
+      <div class="col-12 text-center"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
             <h3>
               <i class="ri-user-line"></i>
@@ -130,7 +126,14 @@
             </h3>
           </div>
         </div>
-
+        <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
+          <div class="icon-box">
+            <h3>
+              <i class="fas fa-handshake"></i>
+              <a href="#" onclick="openPasswordModal('vistas/relaciones.php', 3)">DEPARTAMENTO RELACIONES LABORALES</a>
+            </h3>
+          </div>
+        </div>
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
             <h3>
@@ -139,7 +142,6 @@
             </h3>
           </div>
         </div>
-
         <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
           <div class="icon-box">
             <h3>
@@ -148,28 +150,15 @@
             </h3>
           </div>
         </div>
-
-        <div class="col-12 text-center mt-1"> <!-- Ocupa todo el ancho disponible y centrado -->
-          <div class="icon-box">
-            <h3>
-              <i class="fas fa-handshake"></i>
-              <a href="#" onclick="openPasswordModal('vistas/relaciones.php', 3)">DEPARTAMENTO RELACIONES LABORALES</a>
-            </h3>
-
-          </div>
-        </div>
       </div>
+      <p></p>
       <br>
       <a href="index.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
       </a>
-      <br>
-      <br>
-      <br>
     </div>
   </section><!-- End Hero -->
   <!-- Modal para ingresar contraseña -->
-
   <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -180,7 +169,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+         <form id="matriculaForm">
             <div class="form-group">
               <center>
               <input type="text" class="form-control" id="password" required>
@@ -207,9 +196,15 @@
 function openPasswordModal(url, departamento) {
     $('#passwordModal').modal('show');
     $('#passwordModal').data('url', url);
-    $('#departamento').val(departamento); 
-    $('#hiddenDepartamento').val(departamento); // Asigna el valor del departamento al nuevo campo oculto
-    console.log(departamento);
+    $('#departamento').val(departamento);
+    $('#hiddenDepartamento').val(departamento);
+    console.log("Departamento seleccionado:", departamento); 
+    
+      // Agregar controlador de eventos para el evento submit
+    $('#matriculaForm').on('submit', function(event) {
+        event.preventDefault(); // Evitar la acción predeterminada del formulario
+        checkPassword();
+    });
 }
 
 function checkPassword() {
@@ -239,8 +234,6 @@ function checkPassword() {
         console.error("Error en la petición AJAX:", textStatus, errorThrown);
     });
 }
-
-
 </script>
 </html>
 

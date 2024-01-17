@@ -167,7 +167,7 @@ $tituloPagina = "Inicio";
       </div>  
       <p></p>
       <br>
-      <a href="../Departamentos.php" class="btn-custom btn-lg">
+      <a  href="javascript:void(0);" onclick="cerrarSesion()"class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
 
@@ -179,11 +179,21 @@ $tituloPagina = "Inicio";
   </section>
 </body>
 
+<script>
+        // JavaScript para agregar clases al cerrar sesión
+        function cerrarSesion() {
+
+            setTimeout(function() {
+                window.location.href = 'cerrar_sesion.php';
+                setTimeout(function() {
+                    document.body.classList.remove('logged-out', 'logged-out-effect');
+                }, 500);
+            }, 500);
+        }
+    </script>
 <script src="../librerias/jquery-3.7.1.min.js"></script>
 <script src="../librerias/bootstrap4/bootstrap.min.js"></script>
 <script src="../librerias/bootstrap4/popper.min.js"></script>
 <script src="../librerias/datatable/jquery.dataTables.min.js"></script>
 <script src="../librerias/datatable/dataTables.bootstrap4.min.js"></script>
-
-
 </html>

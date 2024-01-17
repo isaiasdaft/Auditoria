@@ -35,10 +35,10 @@ try {
                 echo json_encode(["error" => "Tipo de usuario no reconocido"]);
             }
         } else {
-            echo json_encode(["error" => "Matricula o departamento Incorrectos"]);
+            echo json_encode(["error" => "Matrícula o departamento Incorrectos"]);
         }
     } else {
-        echo json_encode(["error" => "Matricula Incorrecta"]);
+        echo json_encode(["error" => "Por favor ingresa tu Matrícula "]);
     }
 } catch (Exception $e) {
     echo json_encode(["error" => "Ocurrió un error al iniciar sesión"]);

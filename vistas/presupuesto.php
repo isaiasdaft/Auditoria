@@ -30,7 +30,12 @@ $tituloPagina = "Presupesuto";
   <!-- Vendor CSS Files -->
   <style>
     /* Estilos del encabezado */
-
+    body {
+            margin: 0;
+            padding: 0;
+            background-color: #545957;
+            /* Color de fondo de la página */
+        }
 
 
     .logo a {
@@ -143,15 +148,25 @@ $tituloPagina = "Presupesuto";
       </div>  
       <p></p>
       <br>
-      <a href="../Departamentos.php" class="btn-custom btn-lg">
+      <a  href="javascript:void(0);" onclick="cerrarSesion()"class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
-    <br>
-    <br>
-
+    
     </div>
   </section>
 </body>
+<script>
+        // JavaScript para agregar clases al cerrar sesión
+        function cerrarSesion() {
+
+            setTimeout(function() {
+                window.location.href = 'cerrar_sesion.php';
+                setTimeout(function() {
+                    document.body.classList.remove('logged-out', 'logged-out-effect');
+                }, 500);
+            }, 500);
+        }
+    </script>
 
 <script src="../librerias/jquery-3.7.1.min.js"></script>
 <script src="../librerias/bootstrap4/bootstrap.min.js"></script>

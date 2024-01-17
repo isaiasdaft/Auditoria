@@ -12,6 +12,13 @@
   
   <!-- Vendor CSS Files -->
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #545957;
+      /* Color de fondo de la página */
+    }
+
     /* Estilos del encabezado */
     .logo a {
       color: #5E6160;
@@ -147,56 +154,55 @@
           <tr>
             <th class="icon-box selected" onclick="toggleIcon(this)" >
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 5.1 </a></h3>
+              <h3><a href="puntos/5_1.php"> 5.1 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 5.2 </a></h3>
+              <h3><a href="puntos/5_2.php"> 5.2 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 5.3 </a></h3>
+              <h3><a href="puntos/5_3.php"> 5.3 </a></h3>
             </th>
           </tr>
           <tr>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 5.4 </a></h3>
+              <h3><a href="puntos/5_4.php"> 5.4 </a></h3>
             </td>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 5.5 </a></h3>
+              <h3><a href="puntos/5_5.php"> 5.5 </a></h3>
             </td>
           </tr>
           <tr>
             <th class="icon-box selected" onclick="toggleIcon(this)" >
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 5.6 </a></h3>
+              <h3><a href="puntos/5_6.php"> 5.6 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 5.7 </a></h3>
+              <h3><a href="puntos/5_7.php"> 5.7 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 5.8 </a></h3>
+              <h3><a href="puntos/5_8.php""> 5.8 </a></h3>
             </th>
           </tr>
         </table>
       </center>
-      
+      <p></p>
       <a href="../relaciones.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
-      <br>
-    </div>
 
+    </div>
   </section><!-- End Hero -->
 
   <script>

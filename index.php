@@ -6,7 +6,7 @@
     <title><?php echo isset($tituloPagina) ? $tituloPagina : "Auditoría"; ?></title>
     <link rel="stylesheet" type="text/css" href="librerias/bootstrap4/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="librerias/fontawesome/css/all.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
@@ -16,9 +16,10 @@
             /* Color de fondo de la página */
         }
 
+
         hr {
             border: none;
-            height: 2px;
+            height: 3px;
             /* Altura de la línea */
             background-color: #252827;
             /* Color oscuro de la línea */

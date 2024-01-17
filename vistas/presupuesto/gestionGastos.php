@@ -12,6 +12,13 @@
   
   <!-- Vendor CSS Files -->
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #545957;
+      /* Color de fondo de la página */
+    }
+
     /* Estilos del encabezado */
     .logo a {
       color: #5E6160;
@@ -147,42 +154,39 @@
           <tr>
             <th class="icon-box selected" onclick="toggleIcon(this)" >
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 8.1 </a></h3>
+              <h3><a href="puntos/8_1.php"> 8.1 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 8.2 </a></h3>
+              <h3><a href="puntos/8_2.php"> 8.2 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 8.3 </a></h3>
+              <h3><a href="puntos/8_3.php"> 8.3 </a></h3>
             </th>
           </tr>
           <tr>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 8.4 </a></h3>
+              <h3><a href="puntos/8_4.php"> 8.4 </a></h3>
             </td>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 8.5 </a></h3>
+              <h3><a href="puntos/8_5.php"> 8.5 </a></h3>
             </td>
           </tr>
         </table>
       </center>
-      
+      <p></p>
       <a href="../presupuesto.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
-      <br>
     </div>
-    <br>
-  </section><!-- End Hero -->
-
+  </section>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
     // Ilumina todos los elementos al cargar la página
@@ -197,7 +201,5 @@
     element.classList.remove('selected');
   }
 </script>
-
-
 </body>
 </html>

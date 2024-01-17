@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +8,16 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/nav.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+
   <!-- Vendor CSS Files -->
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #545957;
+      /* Color de fondo de la página */
+    }
+
     /* Estilos del encabezado */
     .logo a {
       color: #5E6160;
@@ -92,20 +98,25 @@
       font-size: 1.2em;
       margin-bottom: 0;
     }
+
     .icon-box a {
       color: #ffffff;
     }
+
     .icon-box.selected {
-  background-color: #007bff !important;
-  color: #ffffff !important;
-}
+      background-color: #007bff !important;
+      color: #ffffff !important;
+    }
+
     .nav-link:hover {
       color: #007bff;
     }
+
     .icon-container .second-row .icon-box {
       background-color: #e74c3c;
       height: 120px;
     }
+
     .btn-custom {
       background-color: #545957;
       color: #438c6b;
@@ -118,6 +129,7 @@
       margin-left: 345px;
       margin-bottom: 60px;
     }
+
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
@@ -126,7 +138,7 @@
 </head>
 
 <body>
-<?php include("headerCapacitacion.php"); ?>
+  <?php include("headerCapacitacion.php"); ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -143,72 +155,70 @@
         </div>
       </div>
       <br>
-      
+
       <center>
         <table>
           <tr>
-            <th class="icon-box selected" onclick="toggleIcon(this)" >
+            <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 6.1 </a></h3>
+              <h3><a href="puntos/6_1.php"> 6.1 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 6.2 </a></h3>
+              <h3><a href="puntos/6_2.php"> 6.2 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 6.3 </a></h3>
+              <h3><a href="puntos/6_3.php"> 6.3 </a></h3>
             </th>
           </tr>
           <tr>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 6.4 </a></h3>
+              <h3><a href="puntos/6_4.php"> 6.4 </a></h3>
             </td>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 6.5 </a></h3>
+              <h3><a href="puntos/6_5.php"> 6.5 </a></h3>
             </td>
           </tr>
           <tr>
-          <td></td>
-          <td></td>
-            <th class="icon-box selected" onclick="toggleIcon(this)" >
+            <td></td>
+            <td></td>
+            <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 6.6 </a></h3>
+              <h3><a href="puntos/6_6.php"> 6.6 </a></h3>
             </th>
           </tr>
         </table>
         <a href="../capacitacion.php" class="btn-custom btn-lg">
-              <span class="fa-solid fa-reply"></span>
-            </a>
-           
+          <span class="fa-solid fa-reply"></span>
+        </a>
       </center>
-      
-
     </div>
-   
+
   </section><!-- End Hero -->
 
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Ilumina todos los elementos al cargar la página
-    var iconBoxes = document.querySelectorAll('.icon-box');
-    iconBoxes.forEach(function(box) {
-      box.classList.add('selected');
+    document.addEventListener("DOMContentLoaded", function() {
+      // Ilumina todos los elementos al cargar la página
+      var iconBoxes = document.querySelectorAll('.icon-box');
+      iconBoxes.forEach(function(box) {
+        box.classList.add('selected');
+      });
     });
-  });
 
-  function toggleIcon(element) {
-    // Desilumina el elemento clicado
-    element.classList.remove('selected');
-  }
-</script>
+    function toggleIcon(element) {
+      // Desilumina el elemento clicado
+      element.classList.remove('selected');
+    }
+  </script>
 
 
 </body>
+
 </html>

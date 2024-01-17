@@ -11,6 +11,12 @@
   
   <!-- Vendor CSS Files -->
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #545957;
+      /* Color de fondo de la página */
+    }
     /* Estilos del encabezado */
     .logo a {
       color: #5E6160;
@@ -148,70 +154,70 @@
           <tr>
             <th class="icon-box selected" onclick="toggleIcon(this)" >
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 3.1 </a></h3>
+              <h3><a href="puntos/3_1.php"> 3.1 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.2 </a></h3>
+              <h3><a href="puntos/3_2.php"> 3.2 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.3 </a></h3>
+              <h3><a href="puntos/3_3.php"> 3.3 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.4 </a></h3>
+              <h3><a href="puntos/3_4.php"> 3.4 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.5 </a></h3>
+              <h3><a href="puntos/3_5.php"> 3.5 </a></h3>
             </th>
           </tr>
           <tr>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.6 </a></h3>
+              <h3><a href="puntos/3_6.php"> 3.6 </a></h3>
             </td>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.7 </a></h3>
+              <h3><a href="puntos/3_7.php"> 3.7 </a></h3>
             </td>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.8 </a></h3>
+              <h3><a href="puntos/3_8.php"> 3.8 </a></h3>
             </td>
             <td></td>
             <td class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.9 </a></h3>
+              <h3><a href="puntos/3_9.php"> 3.9 </a></h3>
             </td>
           </tr>
           <tr>
             <th class="icon-box selected" onclick="toggleIcon(this)" >
               <i class="ri-store-line"></i>
-              <h3><a href="8_1.php"> 3.10 </a></h3>
+              <h3><a href="puntos/3_10.php"> 3.10 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.11 </a></h3>
+              <h3><a href="puntos/3_11.php"> 3.11 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.12 </a></h3>
+              <h3><a href="puntos/3_12.php"> 3.12 </a></h3>
             </th>
             <th></th>
             <th class="icon-box selected" onclick="toggleIcon(this)">
               <i class="ri-store-line"></i>
-              <h3><a href="#"> 3.13 </a></h3>
+              <h3><a href="puntos/3_13.php"> 3.13 </a></h3>
             </th>
           </tr>
         </table>

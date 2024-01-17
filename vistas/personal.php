@@ -8,38 +8,33 @@ if (!isset($_SESSION['id'])) {
 } else {
     $idd = $_SESSION['id'];
 }
-
 $tituloPagina = "Personal";
 ?>
-
-
 <?php include("headerprincipal.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title><?php echo isset($tituloPagina) ? $tituloPagina : "Auditoría"; ?></title>
   <link rel="stylesheet" type="text/css" href="../librerias/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../librerias/fontawesome/css/all.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
   <style>
-    /* Estilos del encabezado */
 
-
-
+    body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            /* Color de fondo de la página */
+        }
     .logo a {
-      color: #5E6160;
+      color: #a0cbac;
       /* Color del texto del logo */
     }
 
     .nav-link {
-      color: #5E6160;
+      color: #a0cbac;
       /* Color del texto del enlace de navegación */
     }
 
@@ -50,7 +45,7 @@ $tituloPagina = "Personal";
 
     /* Estilos de la sección del héroe */
     #hero {
-      background-color: #545957;
+      background-color: #fff;
       /* Color de fondo de la sección del héroe */
       color: #fff;
       /* Color del texto de la sección del héroe */
@@ -72,6 +67,7 @@ $tituloPagina = "Personal";
       /* Tamaño de fuente del subtítulo */
       margin-bottom: 40px;
       /* Espaciado inferior del subtítulo */
+      color: #000000;
     }
 
     .icon-box {
@@ -79,7 +75,7 @@ $tituloPagina = "Personal";
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #757676;
+      background-color: #a0cbac;
       padding: 20px;
       border-radius: 10px;
       transition: 0.3s;
@@ -90,7 +86,7 @@ $tituloPagina = "Personal";
     }
 
     .icon-box:hover {
-      background-color: #515353;
+      background-color: #246f64;
       color: #ffffff;
     }
 
@@ -107,7 +103,7 @@ $tituloPagina = "Personal";
     }
 
     .icon-box a {
-      color: #ffffff;
+      color: #0a0e0b;
     }
 
     .icon-box:hover a {
@@ -118,7 +114,7 @@ $tituloPagina = "Personal";
       color: #007bff;
     }
     .btn-custom {
-      background-color: #545957;
+      background-color: #ffffff;
       color: #438c6b;
       border: none;
       padding: 15px 20px;
@@ -128,9 +124,6 @@ $tituloPagina = "Personal";
       font-size: 55px;
      
     }
-
-
-    /* Estilo para el icono dentro del botón */
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
@@ -186,19 +179,27 @@ $tituloPagina = "Personal";
          
         </div>
       </div>  
+    <p></p>
       <br>
-      <a href="../Departamentos.php" class="btn-custom btn-lg">
+      <a  href="javascript:void(0);" onclick="cerrarSesion()"class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
     </a>
-    <br>
-    <br>
-    <br>
-    <br>
     </div>
   </section>
-
-
 </body>
+
+<script>
+        // JavaScript para agregar clases al cerrar sesión
+        function cerrarSesion() {
+
+            setTimeout(function() {
+                window.location.href = 'cerrar_sesion.php';
+                setTimeout(function() {
+                    document.body.classList.remove('logged-out', 'logged-out-effect');
+                }, 500);
+            }, 500);
+        }
+    </script>
 
 <script src="../librerias/jquery-3.7.1.min.js"></script>
 <script src="../librerias/bootstrap4/bootstrap.min.js"></script>
