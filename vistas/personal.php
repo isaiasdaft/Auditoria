@@ -45,15 +45,18 @@ $tituloPagina = "Personal";
 
     /* Estilos de la sección del héroe */
     #hero {
-      background-color: #fff;
-      /* Color de fondo de la sección del héroe */
-      color: #fff;
-      /* Color del texto de la sección del héroe */
-      padding: 60px 0;
-      /* Espaciado interno de la sección del héroe */
+      background-image: url('../assets/img/fondoaguila.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+      /* Ajusta la altura al 100% de la ventana */
+      margin: 0;
+      /* Elimina el margen para que el fondo se extienda hasta el borde */
+      padding: 20px 0;
       text-align: center;
-      /* Alineación del texto en el centro */
     }
+
 
     #hero h1 {
       font-size: 3em;
@@ -87,7 +90,7 @@ $tituloPagina = "Personal";
 
     .icon-box:hover {
       background-color: #246f64;
-      color: #ffffff;
+      
     }
 
     .icon-box i {
@@ -114,7 +117,7 @@ $tituloPagina = "Personal";
       color: #007bff;
     }
     .btn-custom {
-      background-color: #ffffff;
+      
       color: #438c6b;
       border: none;
       padding: 15px 20px;

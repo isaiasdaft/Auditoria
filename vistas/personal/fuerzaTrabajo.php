@@ -7,6 +7,7 @@ if (!isset($_SESSION['id'])) {
     exit;
 } else {
     $idd = $_SESSION['id'];
+    $depa= $_SESSION['departamento'];
 }
 
 $tituloPagina = "Personal";
@@ -155,13 +156,8 @@ $tituloPagina = "Personal";
 
 <body>
   <?php include("headerpersonal.php"); ?>
-
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <!-- ... (tu contenido actual del encabezado) ... -->
   </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">

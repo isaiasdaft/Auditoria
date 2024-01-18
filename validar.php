@@ -17,18 +17,22 @@ try {
             $filas = mysqli_fetch_assoc($resultado);
             if ($filas['departamento'] == 1) {
                 $_SESSION['id'] = $filas['id'];
+                $_SESSION['departamento'] = $filas['departamento'];
                 $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
                 echo json_encode(["redirect" => "vistas/capacitacion.php"]);
             } elseif ($filas['departamento'] == 2) {
                 $_SESSION['id'] = $filas['id'];
+                $_SESSION['departamento'] = $filas['departamento'];
                 $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
                 echo json_encode(["redirect" => "vistas/personal.php"]);
             } elseif ($filas['departamento'] == 3) {
                 $_SESSION['id'] = $filas['id'];
+                $_SESSION['departamento'] = $filas['departamento'];
                 $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
                 echo json_encode(["redirect" => "vistas/relaciones.php"]);
             } elseif ($filas['departamento'] == 4) {
                 $_SESSION['id'] = $filas['id'];
+                $_SESSION['departamento'] = $filas['departamento'];
                 $_SESSION['tipo_usuario'] = $filas['tipo_usuario']; 
                 echo json_encode(["redirect" => "vistas/presupuesto.php"]);
             } else {

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <title><?php echo isset($tituloPagina) ? $tituloPagina : "Presupuesto y gstión del gasto"; ?></title>
+  <title><?php echo isset($tituloPagina) ? $tituloPagina : "Presupuesto y gestión del gasto"; ?></title>
   <link rel="stylesheet" type="text/css" href="../../librerias/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../librerias/fontawesome/css/all.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/nav.css">

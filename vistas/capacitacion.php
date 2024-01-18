@@ -27,20 +27,19 @@ $tituloPagina = "Inicio";
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <style>
-    /* Estilos del encabezado */
-
-
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
 
     .logo a {
-      color: #5E6160;
-      /* Color del texto del logo */
+      color: #a0cbac;
     }
 
     .nav-link {
-      color: #5E6160;
-      /* Color del texto del enlace de navegación */
+      color: #a0cbac;
     }
 
     .nav-link:hover {
@@ -48,24 +47,29 @@ $tituloPagina = "Inicio";
     }
 
     #hero {
-      background-color: #545957;
-      color: #fff;
-      padding: 50px 0;
+      background-image: url('../assets/img/fondoaguila.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+      /* Ajusta la altura al 100% de la ventana */
+      margin: 0;
+      /* Elimina el margen para que el fondo se extienda hasta el borde */
+      padding: 20px 0;
       text-align: center;
     }
 
     #hero h1 {
       font-size: 3em;
-      /* Tamaño de fuente del título principal */
-      margin-bottom: 25px;
-      /* Espaciado inferior del título principal */
+      margin-top: 10px;
+      /* Ajusta el margen superior del título */
+      margin-bottom: 20px;
     }
 
     #hero h2 {
       font-size: 1.5em;
-      /* Tamaño de fuente del subtítulo */
-      margin-bottom: 30px;
-      /* Espaciado inferior del subtítulo */
+      margin-bottom: 15px;
+      color: #000000;
     }
 
     .icon-box {
@@ -73,35 +77,34 @@ $tituloPagina = "Inicio";
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #757676;
-      padding: 20px;
+      background-color: #a0cbac;
+      padding: 22px;
       border-radius: 10px;
       transition: 0.3s;
       border-width: 3px;
       border-style: solid;
       border-color: #347357;
       color: #ffffff;
+      margin-top: 20px;
     }
 
     .icon-box:hover {
-      background-color: #515353;
+      background-color: #246f64;
       color: #ffffff;
     }
 
     .icon-box i {
       font-size: 2em;
       margin-bottom: 5px;
-      /* Reduzco el espaciado inferior de los íconos */
     }
 
     .icon-box h3 {
       font-size: 1.2em;
       margin-bottom: 0;
-      /* Elimino el espaciado inferior del título de la caja de iconos */
     }
 
     .icon-box a {
-      color: #ffffff;
+      color: #0a0e0b;
     }
 
     .icon-box:hover a {
@@ -111,8 +114,8 @@ $tituloPagina = "Inicio";
     .nav-link:hover {
       color: #007bff;
     }
+
     .btn-custom {
-      background-color: #545957;
       color: #438c6b;
       border: none;
       padding: 15px 20px;
@@ -120,16 +123,11 @@ $tituloPagina = "Inicio";
       cursor: pointer;
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
       font-size: 55px;
-     
     }
 
-
-    /* Estilo para el icono dentro del botón */
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
-      
-      /* Ajusta el espacio entre el icono y el texto si es necesario */
     }
   </style>
 </head>

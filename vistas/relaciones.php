@@ -1,20 +1,15 @@
 <?php
 session_start();
 include("../conexion.php");
-
 if (!isset($_SESSION['id'])) {
   header('Location: ../index.php');
   exit;
 } else {
   $idd = $_SESSION['id'];
 }
-
 $tituloPagina = "Relaciones Laborales";
 ?>
-
-
 <?php include("headerprincipal.php"); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,24 +18,21 @@ $tituloPagina = "Relaciones Laborales";
   <link rel="stylesheet" type="text/css" href="../librerias/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../librerias/fontawesome/css/all.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <style>
-    /* Estilos del encabezado */
-
-
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
 
     .logo a {
-      color: #5E6160;
-      /* Color del texto del logo */
+      color: #a0cbac;
     }
 
     .nav-link {
-      color: #5E6160;
-      /* Color del texto del enlace de navegación */
+      color: #a0cbac;
     }
 
     .nav-link:hover {
@@ -48,24 +40,29 @@ $tituloPagina = "Relaciones Laborales";
     }
 
     #hero {
-      background-color: #545957;
-      color: #fff;
-      padding: 50px 0;
+      background-image: url('../assets/img/fondoaguila.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+      /* Ajusta la altura al 100% de la ventana */
+      margin: 0;
+      /* Elimina el margen para que el fondo se extienda hasta el borde */
+      padding: 20px 0;
       text-align: center;
     }
 
     #hero h1 {
       font-size: 3em;
-      /* Tamaño de fuente del título principal */
-      margin-bottom: 25px;
-      /* Espaciado inferior del título principal */
+      margin-top: 10px;
+      /* Ajusta el margen superior del título */
+      margin-bottom: 20px;
     }
 
     #hero h2 {
       font-size: 1.5em;
-      /* Tamaño de fuente del subtítulo */
-      margin-bottom: 30px;
-      /* Espaciado inferior del subtítulo */
+      margin-bottom: 15px;
+      color: #000000;
     }
 
     .icon-box {
@@ -73,18 +70,19 @@ $tituloPagina = "Relaciones Laborales";
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #757676;
-      padding: 28px;
+      background-color: #a0cbac;
+      padding: 22px;
       border-radius: 10px;
       transition: 0.3s;
-      border-width: 6px;
+      border-width: 3px;
       border-style: solid;
       border-color: #347357;
       color: #ffffff;
+      margin-top: 20px;
     }
 
     .icon-box:hover {
-      background-color: #515353;
+      background-color: #246f64;
       color: #ffffff;
     }
 
@@ -99,7 +97,7 @@ $tituloPagina = "Relaciones Laborales";
     }
 
     .icon-box a {
-      color: #ffffff;
+      color: #0a0e0b;
     }
 
     .icon-box:hover a {
@@ -111,7 +109,6 @@ $tituloPagina = "Relaciones Laborales";
     }
 
     .btn-custom {
-      background-color: #545957;
       color: #438c6b;
       border: none;
       padding: 15px 20px;
@@ -129,14 +126,13 @@ $tituloPagina = "Relaciones Laborales";
 </head>
 
 <body>
-  <header id="header" class="fixed-top">
-    <!-- ... (tu contenido actual del encabezado) ... -->
-  </header><!-- End Header -->
+<header id="headerPrincipal" class="fixed-top">
+    <!-- Contenido del encabezado... -->
+</header> 
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <div class="col-xl-6 col-lg-12">
           <h2>DEPARTAMENTO DE RELACIONES LABORALES</h2>
         </div>
@@ -151,19 +147,15 @@ $tituloPagina = "Relaciones Laborales";
       </div>
       <p></p>
       <br>
-      <a  href="javascript:void(0);" onclick="cerrarSesion()"class="btn-custom btn-lg">
+      <a href="javascript:void(0);" onclick="cerrarSesion()" class="btn-custom btn-lg">
         <span class="fa-solid fa-reply"></span>
       </a>
-      <br>
-      <br>
-      <br>
       <br>
     </div>
   </section>
 </body>
 
 <script>
-  // JavaScript para agregar clases al cerrar sesión
   function cerrarSesion() {
     setTimeout(function() {
       window.location.href = 'cerrar_sesion.php';
