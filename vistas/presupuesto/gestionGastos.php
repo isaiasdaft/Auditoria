@@ -1,144 +1,96 @@
+<?php
+session_start();
+include("../../conexion.php");
 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../../index.php');
+    exit;
+} else {
+    $idd = $_SESSION['id'];
+    $depa= $_SESSION['departamento'];
+}
+
+$tituloPagina = "Gestión de Gastos";
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title><?php echo isset($tituloPagina) ? $tituloPagina : "Presupuesto y gestión del gasto"; ?></title>
+  <title><?php echo isset($tituloPagina) ? $tituloPagina : "Fuerza de Trabajo"; ?></title>
   <link rel="stylesheet" type="text/css" href="../../librerias/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../librerias/fontawesome/css/all.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/nav.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <!-- Vendor CSS Files -->
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #545957;
-      /* Color de fondo de la página */
-    }
-
-    /* Estilos del encabezado */
-    .logo a {
-      color: #5E6160;
-      /* Color del texto del logo */
-    }
-
-    .nav-link {
-      color: #5E6160;
-      /* Color del texto del enlace de navegación */
-    }
-
-    .nav-link:hover {
-      color: #007bff;
-      /* Color del texto del enlace de navegación al pasar el ratón */
-    }
-
-    /* Estilos de la sección del héroe */
     #hero {
-      background-color: #545957;
-      /* Color de fondo de la sección del héroe */
+      background-color: #fff;
       color: #fff;
-      /* Color del texto de la sección del héroe */
       padding: 60px 0;
-      /* Espaciado interno de la sección del héroe */
       text-align: center;
-      /* Alineación del texto en el centro */
     }
-
     #hero h1 {
       font-size: 3em;
-      /* Tamaño de fuente del título principal */
       margin-bottom: 20px;
-      /* Espaciado inferior del título principal */
     }
-
     #hero h2 {
       font-size: 1.5em;
-      /* Tamaño de fuente del subtítulo */
       margin-bottom: 40px;
-      /* Espaciado inferior del subtítulo */
+    }
+    #hero h4 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #1a564d;
     }
 
-    .icon-container {
+    .point-list {
+      list-style-type: none;
+      padding: 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    .icon-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .point-item {
       background-color: #5E6160;
       padding: 20px;
       border-radius: 10px;
-      transition: 0.3s;
-      border-width: 3px;
-      border-style: solid;
-      border-color: #347357;
+      transition: background-color 0.3s, transform 0.3s;
+      cursor: pointer;
+      text-align: center;
+      width: 120px;
+    }
+    .point-item:hover {
+      background-color: #777878;
+      transform: scale(1.15);
+    }
+    .point-item a {
+      text-decoration: none;
       color: #ffffff;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      margin: 2px;
+      font-size: 1.1em;
     }
 
-    .icon-box:hover {
-      background-color: #515353;
-      color: #ffffff;
-    }
-
-    .icon-box i {
-      font-size: 2em;
-      margin-bottom: 1px;
-      /* Reduzco el espaciado inferior de los íconos */
-    }
-
-    .icon-box h3 {
-      font-size: 1.2em;
-      margin-bottom: 0;
-    }
-    .icon-box a {
-      color: #ffffff;
-    }
-    .icon-box.selected {
-  background-color: #007bff !important;
-  color: #ffffff !important;
-}
-    .nav-link:hover {
-      color: #007bff;
-    }
-    .icon-container .second-row .icon-box {
-      background-color: #e74c3c;
-      height: 120px;
-    }
     .btn-custom {
-      background-color: #545957;
+      background-color: #fff;
       color: #438c6b;
       border: none;
       padding: 15px 20px;
       border-radius: 35px;
       cursor: pointer;
-      transition: background-color 0.3s ease-out, color 0.3s ease-out;
+      transition: background-color 0.5s ease-out, color 0.5s ease-out;
       font-size: 55px;
+      margin-top: 30px;
     }
+
     .btn-custom .fa-reply {
       color: #438c6b;
       font-size: 55px;
     }
   </style>
 </head>
-
 <body>
 <?php include("headerPresupuesto.php"); ?>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <!-- ... (tu contenido actual del encabezado) ... -->
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -149,38 +101,24 @@
       </div>
       <br>
       
-      <center>
-        <table>
-          <tr>
-            <th class="icon-box selected" onclick="toggleIcon(this)" >
-              <i class="ri-store-line"></i>
-              <h3><a href="puntos/8_1.php"> 8.1 </a></h3>
-            </th>
-            <th></th>
-            <th class="icon-box selected" onclick="toggleIcon(this)">
-              <i class="ri-store-line"></i>
-              <h3><a href="puntos/8_2.php"> 8.2 </a></h3>
-            </th>
-            <th></th>
-            <th class="icon-box selected" onclick="toggleIcon(this)">
-              <i class="ri-store-line"></i>
-              <h3><a href="puntos/8_3.php"> 8.3 </a></h3>
-            </th>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="icon-box selected" onclick="toggleIcon(this)">
-              <i class="ri-store-line"></i>
-              <h3><a href="puntos/8_4.php"> 8.4 </a></h3>
-            </td>
-            <td></td>
-            <td class="icon-box selected" onclick="toggleIcon(this)">
-              <i class="ri-store-line"></i>
-              <h3><a href="puntos/8_5.php"> 8.5 </a></h3>
-            </td>
-          </tr>
-        </table>
-      </center>
+      <ul class="point-list">
+        <li class="point-item">
+          <a href="puntos/8_1.php">8.1</a>
+        </li>
+        <li class="point-item">
+          <a href="puntos/8_2.php">8.2</a>
+        </li>
+        <li class="point-item">
+          <a href="puntos/8_3.php">8.3</a>
+        </li>
+        <li class="point-item">
+          <a href="puntos/8_4.php">8.4</a>
+        </li>
+        <li class="point-item">
+          <a href="puntos/8_5.php">8.4</a>
+        </li>
+       
+      </ul>
       <p></p>
       <a href="../presupuesto.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>

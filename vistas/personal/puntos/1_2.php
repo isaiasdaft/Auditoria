@@ -137,27 +137,47 @@ $tituloPagina = "Personal";
         <div class="row">
           <div class="col-sm-12">
             <div class="table-responsive">
-              <table class="table table-striped table-hover" id="tablaFuerza">
-                <thead class="thead-dark">
+              <table class="table table-hover table-condensed" id="tablaFuerza">
+                <thead style="background-color: #689477; color: white; font-weight: bold;">
                   <tr>
-                    <td class="d-none d-sm-table-cell">ID</td>
-                    <td>Nombre de la supervisión</td>
-                    <td>Unidad</td>
-                    <td>Fecha de inicio</td>
-                    <td>Fecha de finalización</td>
-                    <td>Estatus</td>
-
+                    <td>ID</td>
+                    <td><center>Nombre de archivo</td>
+                    <td>Tamaño</td>
+                    <td><center>Tipo</td>
+                    <td>Fecha de subida</td>
+                    <td><center>Descargar</td>
                   </tr>
                 </thead>
+
                 <tbody>
+                <?php
+                    $consulta = "SELECT archivos_personal.id, archivos_personal.nombre_archivo,
+                    tamano, tipo, fecha_subido FROM archivos_personal 
+                    WHERE CAST(num_punto AS DECIMAL(10, 2)) = 1.2;  ";
+                    $ejecutar = mysqli_query($conexion, $consulta);
+                    $i = 0;
+                    while ( $fila = mysqli_fetch_array($ejecutar)) {
+                        $ID = $fila['id'];
+                        $name = $fila['nombre_archivo'];
+                        $size = $fila['tamano'];
+                        $type = $fila['tipo'];
+                        $date = $fila['fecha_subido'];
+                        $i++;
+                    ?>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $ID; ?></td>
+                    <td><?php echo $name; ?></td>
+                    <td><?php echo $size; ?></td>
+                    <td><?php echo $type; ?></td>
+                    <td><?php echo $date; ?></td>
+                    <td>
+                       <a href="downloadFuerza.php?file=<?php echo $name; ?>" >
+                                <span class="btn btn-Primary btn-md"><span class="fas fa-download"></span> Descargar</span>
+                                
+                        </a>
+                    </td>
                   </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>
