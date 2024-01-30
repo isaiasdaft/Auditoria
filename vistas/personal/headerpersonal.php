@@ -17,7 +17,7 @@
 <nav type="navbar" class="navbar navbar-expand-lg navbar-dark static-top" style="background-color: #1F6157;">
     <div class="container">
         <a class="navbar-brand">
-            <img src="../../assets/img/a.jpg" alt="" width="90px">
+            <img src="../../assets/img/a.jpg" alt="" width="110px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,10 +26,20 @@
             <!-- Aquí agregamos el título en la parte central del navbar -->
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
-                <a class="nav-link h2">JEFATURA DE SERVICIOS DE DESARROLLO DE PERSONAL</a>
+                <a class="nav-link h2" style="font-size: 34px;">JEFATURA DE SERVICIOS DE DESARROLLO DE PERSONAL</a>
                 </li>
             </ul>
-            <a href="javascript:void(0);" onclick="cerrarSesion()" class="btn-cus btn-lg"><span class="fa-solid fa-house"></span> </a>
+            <a href="javascript:void(0);" onclick="cerrarSesion()" class="btn-cus btn-md enlace-grande"><span class="fa-solid fa-house enlace-icono"></span>  Inicio</a>
         </div>
     </div>
 </nav>
+
+<style>
+    .enlace-grande {
+    font-size: 28px;
+}
+
+.enlace-icono {
+    font-size: 28px;
+}
+</style>

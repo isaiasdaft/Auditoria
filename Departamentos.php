@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="path/to/remix-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
-  <link rel="stylesheet" href="path/to/otro-archivo-de-estilos.css">
+
   <style>
     .logo a {
       color: #a0cbac;
@@ -19,8 +19,14 @@
       color: #a0cbac;
     }
     #hero {
-      
-      color: #00ff00;
+      background-image: url('assets/img/fondoaguila.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+      /* Ajusta la altura al 100% de la ventana */
+      margin: 0;
+      /* Elimina el margen para que el fondo se extienda hasta el borde */
       padding: 20px 0;
       text-align: center;
     }
@@ -38,8 +44,8 @@
       align-items: center;
       justify-content: center;
       background-color: #a0cbac;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 30px;
+      border-radius: 20px;
       transition: 0.3s;
       border-width: 3px;
       border-style: solid;
@@ -51,10 +57,9 @@
       color: #ffffff;
     }
     .icon-box i {
-      font-size: 2em;
-      margin-bottom: 5px;
+      font-size: 3.5em;
+      margin-bottom: 20px;
       color: #0a0e0b; 
-
     }
     .icon-box h3 {
       font-size: 1.2em;
@@ -71,11 +76,11 @@
       color: #007bff;
     }
     #hero {
-      margin-top: -57px;
+      margin-top: -55px;
     }
     .icon-box i {
       color: #3a3b3d;
-      margin-right: 10px;
+      margin-right: 15px;
     }
     .btn-custom {
       background-color: #fff;
@@ -89,7 +94,7 @@
     }
     .btn-custom .fa-reply {
       color: #438c6b;
-      font-size: 54px;
+      font-size: 80px;
 
     }
     @keyframes slide-left-fade-in {
@@ -122,7 +127,7 @@
           <div class="icon-box">
             <h3>
               <i class="ri-user-line"></i>
-              <a href="#" onclick="openPasswordModal('vistas/personal.php', 2)">DEPARTAMENTO PERSONAL</a>
+              <a href="#" onclick="openPasswordModal('vistas/personal.php', 2)"  style="font-size: 32px;">DEPARTAMENTO PERSONAL</a>
             </h3>
           </div>
         </div>
@@ -130,7 +135,7 @@
           <div class="icon-box">
             <h3>
               <i class="fas fa-handshake"></i>
-              <a href="#" onclick="openPasswordModal('vistas/relaciones.php', 3)">DEPARTAMENTO RELACIONES LABORALES</a>
+              <a href="#" onclick="openPasswordModal('vistas/relaciones.php', 3)"  style="font-size: 32px;">DEPARTAMENTO RELACIONES LABORALES</a>
             </h3>
           </div>
         </div>
@@ -138,7 +143,7 @@
           <div class="icon-box">
             <h3>
               <i class="fas fa-book"></i>
-              <a href="#" onclick="openPasswordModal('vistas/capacitacion.php', 1)">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA</a>
+              <a href="#" onclick="openPasswordModal('vistas/capacitacion.php', 1)"  style="font-size: 32px;">DEPARTAMENTO CAPACITACIÓN Y TRANSPARENCIA</a>
             </h3>
           </div>
         </div>
@@ -146,12 +151,13 @@
           <div class="icon-box">
             <h3>
               <i class="fas fa-dollar-sign"></i>
-              <a href="#" onclick="openPasswordModal('vistas/presupuesto.php', 4)">DEPARTAMENTO PRESUPUESTO Y CONTROL DE GASTOS</a>
+              <a href="#" onclick="openPasswordModal('vistas/presupuesto.php', 4)"  style="font-size: 32px;">DEPARTAMENTO PRESUPUESTO Y CONTROL DE GASTOS</a>
             </h3>
           </div>
         </div>
       </div>
       <p></p>
+      <br>
       <br>
       <a href="index.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>

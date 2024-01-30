@@ -26,6 +26,19 @@ $tituloPagina = "Personal";
       text-align: center;
     }
 
+    #hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+    }
+    #hero h3 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    #hero h4 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
+    }
+
     .modal-body {
       color: #000;
     }
@@ -58,9 +71,11 @@ $tituloPagina = "Personal";
       position: absolute;
       top: 0;
       right: 0;
-      margin-top: 0.1px;
+      margin-top: 0.8px;
       margin-right: 5px;
+      
     }
+
   </style>
 </head>
 
@@ -76,11 +91,11 @@ $tituloPagina = "Personal";
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-6 col-lg-6">
           <h2>Presupuesto y gestión de gastos</h2>
           <h4>8.2</h4>
           <p></p>
-          <button type="button" class="btn btn-info btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-info btn-lg btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
             <span class="fa-solid fa-circle-info"></span>
           </button>
 

@@ -32,11 +32,11 @@ $tituloPagina = "Personal";
       margin-bottom: 20px;
     }
     #hero h2 {
-      font-size: 1.5em;
+      font-size: 4em;
       margin-bottom: 40px;
     }
     #hero h4 {
-      font-size: 2em;
+      font-size: 3.3em;
       margin-bottom: 20px;
       color: #1a564d;
     }
@@ -47,27 +47,27 @@ $tituloPagina = "Personal";
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
+      gap: 40px;
+      margin-top: 40px;
     }
 
     .point-item {
-      background-color: #5E6160;
-      padding: 20px;
+      background-color: #2e8c7e;
+      padding: 35px;
       border-radius: 10px;
       transition: background-color 0.3s, transform 0.3s;
       cursor: pointer;
       text-align: center;
-      width: 120px;
+      width: 210px;
     }
     .point-item:hover {
-      background-color: #777878;
+      background-color: #1F6157;
       transform: scale(1.15);
     }
     .point-item a {
       text-decoration: none;
       color: #ffffff;
-      font-size: 1.1em;
+      font-size: 2em;
     }
 
     .btn-custom {
@@ -75,16 +75,16 @@ $tituloPagina = "Personal";
       color: #438c6b;
       border: none;
       padding: 15px 20px;
-      border-radius: 35px;
+      border-radius: 55px;
       cursor: pointer;
       transition: background-color 0.5s ease-out, color 0.5s ease-out;
-      font-size: 55px;
+      font-size: 75px;
       margin-top: 30px;
     }
 
     .btn-custom .fa-reply {
       color: #438c6b;
-      font-size: 55px;
+      font-size: 80px;
     }
   </style>
 </head>
@@ -95,7 +95,7 @@ $tituloPagina = "Personal";
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-12 col-lg-12">
           <h2>DEPARTAMENTO DE PERSONAL</h2>
           <h4>Dotación de Recursos Humanos</h4>
         </div>

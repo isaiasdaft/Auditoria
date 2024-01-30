@@ -9,6 +9,12 @@ if (!isset($_SESSION['id'])) {
   $depa = $_SESSION['departamento'];
 }
 $tituloPagina = "Personal";
+$consulta_texto = "SELECT observacion FROM observaciones WHERE num_punto = 1.8"; // Ajusta la consulta según tu estructura de base de datos
+$resultado_texto = mysqli_query($conexion, $consulta_texto);
+
+if ($fila_texto = mysqli_fetch_array($resultado_texto)) {
+    $texto_modal = $fila_texto['observacion'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +32,19 @@ $tituloPagina = "Personal";
       text-align: center;
     }
 
+    #hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+    }
+    #hero h3 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    #hero h4 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
+    }
+
     .modal-body {
       color: #000;
     }
@@ -33,6 +52,7 @@ $tituloPagina = "Personal";
     .modal-title {
       color: #2b6c42;
     }
+
     .btn-custom {
       color: #438c6b;
       border: none;
@@ -42,6 +62,7 @@ $tituloPagina = "Personal";
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
       font-size: 55px;
     }
+
     .btn-cus {
       color: #a3d6bd;
       border: none;
@@ -58,7 +79,9 @@ $tituloPagina = "Personal";
       right: 0;
       margin-top: 0.1px;
       margin-right: 30px;
+      
     }
+
   </style>
 </head>
 
@@ -74,11 +97,11 @@ $tituloPagina = "Personal";
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-8 col-lg-8">
           <h2>Fuerza del trabajo</h2>
           <h4>1.8</h4>
           <p></p>
-          <button type="button" class="btn btn-info btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-info btn-lg btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
             <span class="fa-solid fa-circle-info"></span>
           </button>
 
@@ -93,10 +116,7 @@ $tituloPagina = "Personal";
                   </button>
                 </div>
                 <div class="modal-body">
-                1.8 Regularizar todos los casos con la autorización del Titular del OOAD, conforme a lo que establece el Oficio Circular 916,
-	Coordinar el ajuste de las incidnecias que no se llevaron a cabo en tiempo y forma de retardos, pases y sin retardos
-	Realizar Oficio al trabajador notificando a cada uno de ellos conforme a la Unidad correspondiente
-	Solicitar evidencia de los 17 casos por correo electrónico.
+                <?php echo $texto_modal; ?>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>

@@ -9,6 +9,12 @@ if (!isset($_SESSION['id'])) {
   $depa = $_SESSION['departamento'];
 }
 $tituloPagina = "Relaciones Laborales";
+$consulta_texto = "SELECT observacion FROM observaciones WHERE num_punto = 5.8"; // Ajusta la consulta según tu estructura de base de datos
+$resultado_texto = mysqli_query($conexion, $consulta_texto);
+
+if ($fila_texto = mysqli_fetch_array($resultado_texto)) {
+    $texto_modal = $fila_texto['observacion'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +30,19 @@ $tituloPagina = "Relaciones Laborales";
       color: #1e1a1a;
       padding: 50px 0;
       text-align: center;
+    }
+
+    #hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+    }
+    #hero h3 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    #hero h4 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
     }
 
     .modal-body {
@@ -60,7 +79,9 @@ $tituloPagina = "Relaciones Laborales";
       right: 0;
       margin-top: 0.1px;
       margin-right: 30px;
+      
     }
+
   </style>
 </head>
 
@@ -75,11 +96,11 @@ $tituloPagina = "Relaciones Laborales";
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-8 col-lg-8">
           <h2>Relaciones Laborales</h2>
           <h4>5.8</h4>
           <p></p>
-          <button type="button" class="btn btn-info btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-info btn-lg btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
             <span class="fa-solid fa-circle-info"></span>
           </button>
 
@@ -94,21 +115,8 @@ $tituloPagina = "Relaciones Laborales";
                   </button>
                 </div>
                 <div class="modal-body">
-                5.8 Realizar análisis de los registros que integran la cuenta de los ejercicios fiscales 2010 al 2023.
-	Integrar debidamente la pestaña de deudores de los registros del ejercicio fiscal 2023.
-	Solicitar el correcto registro contable a Retiro Laboral del caso de Delgado González Graciela, matricula. 9115099.
-	Continuar con la recuperación del adeudo por el Cpto. 136 dentro de la cédula de liquidación finiquita del C. Roque Ruvalcaba Christian Enrique, mat.99012590.
-	Realizar integración de ejercicios fiscales pendientes (2017);
-	La persona encargada del proceso debe identificar los saldos pendientes de recuperar, para el seguimiento en las acciones a realizar para la recuperación o depuración.
-	Llevar a cabo capacitación para la debida integración y análisis de los movimientos contable de los vales otorgados.
-	Derivado a que el saldo negativo, se origina por la recuperación del Cpto. 190 caja de ahorros (préstamo), es necesario solicitar el estatus del adeudo a caja de ahorros.
-	En caso de proceder, se solicitará al OOAD, ajustar el adeudo del Cpto. 190 o bien omitirlo en caso de que se haya recuperado mediante la figura del aval.
-	Realizar acta administrativa para la reversión del registro contable de la cédula de liquidación finiquita.
-	Solicitar el registro contable de la cédula de liquidación finiquita.
-	*Elaborar acuerdo con ing.Jacob, Lic. Marcela, Bety y Lic. Jesús para el tema de conciliación de cuentas
-	*Elaborar Oficio para informar la situación detectada (Lic. Marcela e Ing.Jacob)
-	*Acción preventiva: Impelementar reunión de acuerdos para el proceso de afectación de cuentas y estar todos de acuerdo.
-                </div>
+                <?php echo $texto_modal; ?>
+
                 <div class="modal-footer">
                   <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>

@@ -28,7 +28,16 @@
                 <a class="nav-link h2">JEFATURA DE SERVICIOS DE DESARROLLO DE PERSONAL</a>
                 </li>
             </ul>
-            <a href="javascript:void(0);" onclick="cerrarSesion()"class="btn-cus btn-lg"><span class="fa-solid fa-house"></span> </a>
+            <a href="javascript:void(0);" onclick="cerrarSesion()" class="btn-cus btn-lg enlace-grande"><span class="fa-solid fa-house enlace-icono"></span>  Inicio</a>
         </div>
     </div>
 </nav>
+<style>
+    .enlace-grande {
+    font-size: 32px;
+}
+
+.enlace-icono {
+    font-size: 32px;
+}
+</style>

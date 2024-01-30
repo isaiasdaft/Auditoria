@@ -9,6 +9,12 @@ if (!isset($_SESSION['id'])) {
   $depa = $_SESSION['departamento'];
 }
 $tituloPagina = "Relaciones Laborales";
+$consulta_texto = "SELECT observacion FROM observaciones WHERE num_punto = 5.7"; // Ajusta la consulta según tu estructura de base de datos
+$resultado_texto = mysqli_query($conexion, $consulta_texto);
+
+if ($fila_texto = mysqli_fetch_array($resultado_texto)) {
+    $texto_modal = $fila_texto['observacion'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +30,19 @@ $tituloPagina = "Relaciones Laborales";
       color: #1e1a1a;
       padding: 50px 0;
       text-align: center;
+    }
+
+    #hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+    }
+    #hero h3 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    #hero h4 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
     }
 
     .modal-body {
@@ -60,7 +79,9 @@ $tituloPagina = "Relaciones Laborales";
       right: 0;
       margin-top: 0.1px;
       margin-right: 30px;
+      
     }
+
   </style>
 </head>
 <body>
@@ -74,11 +95,11 @@ $tituloPagina = "Relaciones Laborales";
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-8 col-lg-8">
           <h2>Relaciones Laborales</h2>
           <h4>5.7</h4>
           <p></p>
-          <button type="button" class="btn btn-info btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-info btn-lg btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
             <span class="fa-solid fa-circle-info"></span>
           </button>
 
@@ -93,16 +114,7 @@ $tituloPagina = "Relaciones Laborales";
                   </button>
                 </div>
                 <div class="modal-body">
-                5.7 Gestionar con el SNTSS, la designación de los miembros suplentes que participarán en el CDMSCANP, haciendo llegar a la CRL más tardar el 08 de noviembre de 2023, las constancias que acrediten dichas gestiones (minuta de sesión) y los oficios de suplencia correspondientes.
-	Implementar una campaña de concientización masiva de difusión visual permanente, dirigida a todos los trabajadores, a fin de crear conciencia y sensibilización sobre la importancia de no generar ANP
-	Depositar en el menú FTP el tablero de control de julio y agosto y la minuta de sesión del mismo periodo. La actualización deberá realizarse de manera mensual.
-	A más tardar el 08 de noviembre de 2023, depositen en el menú “Subcomités” del SINANP la totalidad de sus mecanismos de control anuales  y mensuales.
-	Elaborar cartelones y colocar en los checadores de todas las Unidades
-	Evidencia de difusión a través de grupos de Whats App
-	Difusión a través de correos electrónicos
-	Impresión de pantalla con minutas acualizadas
-	Correo electrónico en donde se evidencia la solicitud en el cumplimiento de los comités locales
-	Campaña de difusión en colaboración con la Coordinación de Comunicación Social.
+                <?php echo $texto_modal; ?>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>

@@ -9,6 +9,12 @@ if (!isset($_SESSION['id'])) {
   $depa = $_SESSION['departamento'];
 }
 $tituloPagina = "Personal";
+$consulta_texto = "SELECT observacion FROM observaciones WHERE num_punto = 4.5"; // Ajusta la consulta según tu estructura de base de datos
+$resultado_texto = mysqli_query($conexion, $consulta_texto);
+
+if ($fila_texto = mysqli_fetch_array($resultado_texto)) {
+    $texto_modal = $fila_texto['observacion'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +30,19 @@ $tituloPagina = "Personal";
       color: #1e1a1a;
       padding: 50px 0;
       text-align: center;
+    }
+
+    #hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+    }
+    #hero h3 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+    #hero h4 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
     }
 
     .modal-body {
@@ -60,7 +79,9 @@ $tituloPagina = "Personal";
       right: 0;
       margin-top: 0.1px;
       margin-right: 30px;
+      
     }
+
   </style>
 </head>
 
@@ -76,11 +97,11 @@ $tituloPagina = "Personal";
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-8 col-lg-8">
           <h2>Retiro Laboral</h2>
           <h4>4.5</h4>
           <p></p>
-          <button type="button" class="btn btn-info btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-info btn-lg btn-especificaciones" data-toggle="modal" data-target="#exampleModal">
             <span class="fa-solid fa-circle-info"></span>
           </button>
 
@@ -95,7 +116,7 @@ $tituloPagina = "Personal";
                   </button>
                 </div>
                 <div class="modal-body">
-                4.5 Correo electrónico al CP Irving, en donde se hace la modificación de enero a octubre 2023, así como evidencia de correos electrónicos enviados anteriormente.
+                <?php echo $texto_modal; ?>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>

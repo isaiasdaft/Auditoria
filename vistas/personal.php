@@ -3,10 +3,10 @@ session_start();
 include("../conexion.php");
 
 if (!isset($_SESSION['id'])) {
-    header('Location: ../index.php');
-    exit;
+  header('Location: ../index.php');
+  exit;
 } else {
-    $idd = $_SESSION['id'];
+  $idd = $_SESSION['id'];
 }
 $tituloPagina = "Personal";
 ?>
@@ -14,6 +14,7 @@ $tituloPagina = "Personal";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title><?php echo isset($tituloPagina) ? $tituloPagina : "Auditoría"; ?></title>
   <link rel="stylesheet" type="text/css" href="../librerias/bootstrap4/bootstrap.min.css">
@@ -21,13 +22,13 @@ $tituloPagina = "Personal";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <style>
-
     body {
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            /* Color de fondo de la página */
-        }
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      /* Color de fondo de la página */
+    }
+
     .logo a {
       color: #a0cbac;
       /* Color del texto del logo */
@@ -43,33 +44,25 @@ $tituloPagina = "Personal";
       /* Color del texto del enlace de navegación al pasar el ratón */
     }
 
-    /* Estilos de la sección del héroe */
     #hero {
       background-image: url('../assets/img/fondoaguila.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       height: 100vh;
-      /* Ajusta la altura al 100% de la ventana */
       margin: 0;
-      /* Elimina el margen para que el fondo se extienda hasta el borde */
       padding: 20px 0;
       text-align: center;
     }
 
-
     #hero h1 {
       font-size: 3em;
-      /* Tamaño de fuente del título principal */
       margin-bottom: 20px;
-      /* Espaciado inferior del título principal */
     }
 
     #hero h2 {
-      font-size: 1.5em;
-      /* Tamaño de fuente del subtítulo */
+      font-size: 4.2em;
       margin-bottom: 40px;
-      /* Espaciado inferior del subtítulo */
       color: #000000;
     }
 
@@ -80,28 +73,42 @@ $tituloPagina = "Personal";
       justify-content: center;
       background-color: #a0cbac;
       padding: 20px;
-      border-radius: 10px;
+      /* Ajusta el padding para permitir más espacio para el texto */
+      border-radius: 15px;
+      /* Ajusta el radio de borde para un aspecto más redondeado */
       transition: 0.3s;
       border-width: 3px;
       border-style: solid;
       border-color: #347357;
       color: #ffffff;
+      height: 100%;
+      /* Garantiza que las cajas tengan la misma altura */
+      overflow: hidden;
+      /* Evita que el texto se desborde fuera de las cajas */
+      /* Ajusta el ancho de las cajas para evitar que el texto se desborde */
+      
+      /* Ajusta el ancho según tus necesidades */
+      margin: 10px;
     }
 
     .icon-box:hover {
       background-color: #246f64;
-      
+
     }
 
     .icon-box i {
-      font-size: 2em;
-      margin-bottom: 5px;
-      /* Reduzco el espaciado inferior de los íconos */
+      font-size: 3em;
+      /* Aumenta el tamaño de los íconos */
+      margin-bottom: 15px;
+      width: 100%;
+      /* Ajusta el ancho del icono al 100% */
+      text-align: center;
+      /* Centra el icono dentro de su contenedor */
     }
 
     .icon-box h3 {
-      font-size: 1.2em;
-      margin-bottom: 0;
+      font-size: 2em;
+      margin-bottom: 10px;
       /* Elimino el espaciado inferior del título de la caja de iconos */
     }
 
@@ -116,21 +123,23 @@ $tituloPagina = "Personal";
     .nav-link:hover {
       color: #007bff;
     }
+
     .btn-custom {
-      
+
       color: #438c6b;
       border: none;
       padding: 15px 20px;
-      border-radius: 35px;
+      border-radius: 55px;
       cursor: pointer;
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
       font-size: 55px;
-     
+
     }
+
     .btn-custom .fa-reply {
       color: #438c6b;
-      font-size: 55px;
-      
+      font-size: 85px;
+
       /* Ajusta el espacio entre el icono y el texto si es necesario */
     }
   </style>
@@ -151,15 +160,14 @@ $tituloPagina = "Personal";
           <h2>DEPARTAMENTO DE PERSONAL</h2>
         </div>
       </div>
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="350">
+        <div class="col-xl-3 col-md-6">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="personal/fuerzaTrabajo.php">FUERZA DE TRABAJO​</a></h3>
-
           </div>
         </div>
-        <div class="col-xl-2 col-md-4">
+        <div class="col-xl-3 col-md-6">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="personal/DotacionRH.php">DOTACIÓN DE RH​</a></h3>
@@ -167,48 +175,45 @@ $tituloPagina = "Personal";
           </div>
         </div>
 
-        <div class="col-xl-2 col-md-4">
+        <div class="col-xl-3 col-md-3">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="personal/prestacionesPersonal.php">PRESTACIONES AL PERSONAL</a></h3>
 
           </div>
         </div>
-        <div class="col-xl-2 col-md-4">
+        <div class="col-xl-3 col-md-6">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="personal/retiroLaboral.php">RETIRO LABORAL</a></h3>
           </div>
-         
+
         </div>
-      </div>  
-    <p></p>
+      </div>
+      <p></p>
       <br>
-      <a  href="javascript:void(0);" onclick="cerrarSesion()"class="btn-custom btn-lg">
-      <span class="fa-solid fa-reply"></span>
-    </a>
+      <a href="javascript:void(0);" onclick="cerrarSesion()" class="btn-custom btn-lg">
+        <span class="fa-solid fa-reply"></span>
+      </a>
     </div>
   </section>
 </body>
 
 <script>
-        // JavaScript para agregar clases al cerrar sesión
-        function cerrarSesion() {
-
-            setTimeout(function() {
-                window.location.href = 'cerrar_sesion.php';
-                setTimeout(function() {
-                    document.body.classList.remove('logged-out', 'logged-out-effect');
-                }, 500);
-            }, 500);
-        }
-    </script>
+  function cerrarSesion() {
+    setTimeout(function() {
+      window.location.href = 'cerrar_sesion.php';
+      setTimeout(function() {
+        document.body.classList.remove('logged-out', 'logged-out-effect');
+      }, 500);
+    }, 500);
+  }
+</script>
 
 <script src="../librerias/jquery-3.7.1.min.js"></script>
 <script src="../librerias/bootstrap4/bootstrap.min.js"></script>
 <script src="../librerias/bootstrap4/popper.min.js"></script>
 <script src="../librerias/datatable/jquery.dataTables.min.js"></script>
 <script src="../librerias/datatable/dataTables.bootstrap4.min.js"></script>
-
 
 </html>
