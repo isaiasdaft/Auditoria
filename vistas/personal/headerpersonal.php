@@ -36,10 +36,10 @@
 
 <style>
     .enlace-grande {
-    font-size: 28px;
+    font-size: 30px;
 }
 
 .enlace-icono {
-    font-size: 28px;
+    font-size: 30px;
 }
 </style>

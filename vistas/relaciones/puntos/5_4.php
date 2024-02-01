@@ -24,65 +24,9 @@ if ($fila_texto = mysqli_fetch_array($resultado_texto)) {
   <link rel="stylesheet" type="text/css" href="../../../librerias/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../../librerias/fontawesome/css/all.css">
   <link rel="stylesheet" type="text/css" href="../../../assets/css/nav.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/newpuntos.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    #hero {
-      color: #1e1a1a;
-      padding: 50px 0;
-      text-align: center;
-    }
 
-    #hero h2 {
-      font-size: 3.5em;
-      margin-bottom: 40px;
-    }
-    #hero h3 {
-      font-size: 2.5em;
-      margin-bottom: 40px;
-    }
-    #hero h4 {
-      font-size: 2.8em;
-      margin-bottom: 40px;
-    }
-
-    .modal-body {
-      color: #000;
-    }
-
-    .modal-title {
-      color: #2b6c42;
-    }
-
-    .btn-custom {
-      color: #438c6b;
-      border: none;
-      padding: 15px 20px;
-      border-radius: 35px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-out, color 0.3s ease-out;
-      font-size: 55px;
-    }
-
-    .btn-cus {
-      color: #a3d6bd;
-      border: none;
-    }
-
-    .btn-custom .fa-reply {
-      color: #438c6b;
-      font-size: 55px;
-    }
-
-    .btn-especificaciones {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-top: 0.1px;
-      margin-right: 30px;
-      
-    }
-
-  </style>
 </head>
 <body>
   <?php include("header.php"); ?>

@@ -1,0 +1,115 @@
+
+.logo a {
+  color: #a0cbac;
+}
+.nav-link {
+  color: #a0cbac;
+}
+.nav-link:hover {
+  color: #a0cbac;
+}
+  #hero {
+  background-image: url('../img/fondoaguila.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  margin: 70px 0 0 0; /* Ajusta el margen superior para desplazar el elemento */
+  padding: 20px 0;
+  text-align: center;
+}
+#hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+#hero h2 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a0cbac;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #347357;
+  color: #ffffff;
+}
+.icon-box:hover {
+  background-color: #246f64;
+  color: #ffffff;
+}
+.icon-box i {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #0a0e0b; 
+}
+.icon-box h3 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  color: #0a0e0b; 
+}
+.icon-box a {
+  color: #0a0e0b;
+}
+.icon-box:hover a {
+  color: #0a0e0b;
+}
+.nav-link:hover {
+  color: #007bff;
+}
+#hero {
+  margin-top: -55px;
+}
+.icon-box i {
+  color: #3a3b3d;
+  margin-right: 15px;
+}
+.btn-custom {
+  background-color: #fff;
+  color: #438c6b;
+  border: none;
+  padding: 25px 50px;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  font-size: 55px;
+}
+.btn-custom .fa-reply {
+  color: #438c6b;
+  font-size: 80px;
+
+}
+.btn-config {
+  color: #6d6d6d;
+  border: none;
+  padding: 25px 50px;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  font-size: 55px;
+  margin-left: 990px;
+}
+.btn-config .fa-gear {
+  color: #6d6d6d;
+  font-size: 88px;
+
+}
+@keyframes slide-left-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-in {
+  animation: slide-left-fade-in 1s ease-out;
+}

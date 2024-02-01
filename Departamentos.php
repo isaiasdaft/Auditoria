@@ -7,115 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="path/to/remix-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
-
-  <style>
-    .logo a {
-      color: #a0cbac;
-    }
-    .nav-link {
-      color: #a0cbac;
-    }
-    .nav-link:hover {
-      color: #a0cbac;
-    }
-    #hero {
-      background-image: url('assets/img/fondoaguila.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      height: 100vh;
-      /* Ajusta la altura al 100% de la ventana */
-      margin: 0;
-      /* Elimina el margen para que el fondo se extienda hasta el borde */
-      padding: 20px 0;
-      text-align: center;
-    }
-    #hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-    #hero h2 {
-      font-size: 1.5em;
-      margin-bottom: 40px;
-    }
-    .icon-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #a0cbac;
-      padding: 30px;
-      border-radius: 20px;
-      transition: 0.3s;
-      border-width: 3px;
-      border-style: solid;
-      border-color: #347357;
-      color: #ffffff;
-    }
-    .icon-box:hover {
-      background-color: #246f64;
-      color: #ffffff;
-    }
-    .icon-box i {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      color: #0a0e0b; 
-    }
-    .icon-box h3 {
-      font-size: 1.2em;
-      margin-bottom: 0;
-      color: #0a0e0b; 
-    }
-    .icon-box a {
-      color: #0a0e0b;
-    }
-    .icon-box:hover a {
-      color: #0a0e0b;
-    }
-    .nav-link:hover {
-      color: #007bff;
-    }
-    #hero {
-      margin-top: -55px;
-    }
-    .icon-box i {
-      color: #3a3b3d;
-      margin-right: 15px;
-    }
-    .btn-custom {
-      background-color: #fff;
-      color: #438c6b;
-      border: none;
-      padding: 25px 50px;
-      border-radius: 45px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-out, color 0.3s ease-out;
-      font-size: 55px;
-    }
-    .btn-custom .fa-reply {
-      color: #438c6b;
-      font-size: 80px;
-
-    }
-    @keyframes slide-left-fade-in {
-      from {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    .animate-in {
-      animation: slide-left-fade-in 1s ease-out;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="assets/css/depa.css">
 </head>
 <body>
   <?php include("header.php"); ?>
-  <section id="hero" class="d-flex align-items-center justify-content-center animate-in">
-    <div class="container" data-aos="fade-up">
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div  id="hero-container" class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
           <h2></h2>
@@ -158,9 +55,14 @@
       </div>
       <p></p>
       <br>
-      <br>
+    
       <a href="index.php" class="btn-custom btn-lg">
       <span class="fa-solid fa-reply"></span>
+      </a>
+
+<p></p>
+      <a href="vistas/config.php" class="btn-config btn-lg">
+      <span class="fa-solid fa-gear"></span>
       </a>
     </div>
   </section><!-- End Hero -->
@@ -242,5 +144,13 @@ function checkPassword() {
 }
 </script>
 </html>
+
+<script>
+  window.addEventListener('load', function() {
+    // Espera a que la página se cargue completamente
+    var heroContainer = document.getElementById('hero-container');
+    heroContainer.classList.add('animate-in'); // Aplica la clase de animación
+  });
+</script>
 
 
